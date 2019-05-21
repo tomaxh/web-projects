@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <title>css tab</title>
+    <script>
+        window.onload = function () {
+            var oLi = document.getElementById("tab").getElementsByTagName("li");
+            var oUl = document.getElementById("content").getElementsByTagName("ul");
+
+            for (var i = 0; i < oLi.length; i++) {
+                oLi[i].index = i;
+                oLi[i].onmouseover = function () {
+                    for (var n = 0; n < oLi.length; n++) oLi[n].className = "";
+                    this.className = "current";
+                    for (var n = 0; n < oUl.length; n++) oUl[n].style.display = "none";
+                    oUl[this.index].style.display = "block"
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="outer">
+        <ul id="tab">
+            <li class="current">I</li>
+            <li>II</li>
+            <li>III</li>
+        </ul>
+        <div id="content">
+            <ul style="display:block;">
+                <li>I first class</li>
+                <li>I second class</li>
+                <li>I third class</li>
+                <li>I fourth class</li>
+                <li>I fifth class</li>
+
+            </ul>
+            <ul>
+                <li>II first class</li>
+                <li>II second class</li>
+                <li>II third class</li>
+                <li>II fourth class</li>
+                <li>II fifth class</li>
+            </ul>
+            <ul>
+                <li>III first class</li>
+                <li>III second class</li>
+                <li>III third class</li>
+                <li>III fourth class</li>
+                <li>III fifth class</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
