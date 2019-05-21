@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' type='text/css' href=style.css>
+    <title>modify-div-property</title>
+    <script>
+
+        var changeAttr = function (attribute) {
+            let element = document.getElementById('target');
+            if (attribute == 'height' || attribute == 'width') {
+                let value = Number(element.style[attribute].slice(0, -2)) ? Number(element.style[attribute].slice(0, -2)) : 100;
+                element.style[attribute] = value + 100 + 'px';
+            }
+            if (attribute == 'color') {
+                let colors = ['red', 'yellow', 'green'];
+                element.style['background-color'] = colors[Math.floor(Math.random() * colors.length)];
+            }
+            if (attribute == 'visibility') {
+                element.style[attribute] = element.style[attribute] == 'visible' ? 'hidden' : 'visible';
+            }
+            if (attribute == 'reset') {
+                location.reload(false);
+            }
+        };
+
+        window.onload = function () {
+
+            document.getElementById('width').onclick = function () {
+                changeAttr('width');
+            };
+            document.getElementById('height').onclick = function () {
+                changeAttr('height');
+            };
+            document.getElementById('color').onclick = function () {
+                changeAttr('color');
+
+            };
+            document.getElementById('visibility').onclick = function () {
+                changeAttr('visibility');
+            };
+            document.getElementById('visibility').onclick = function () {
+                changeAttr('visibility');
+            };
+            document.getElementById('reset').onclick = function () {
+                changeAttr('reset');
+            };
+        };
+
+    </script>
+</head>
+
+<body>
+    <div class='container'>
+        <button id='width'>width</button>
+        <button id='height'>height</button>
+        <button id='color'>color</button>
+        <button id='visibility'>visibility</button>
+        <button id='reset'>reset</button>
+        <div id='target'></div>
+    </div>
+</body>
+
+</html>

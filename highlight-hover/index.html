@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <title>highlight hover</title>
+    <script>
+        window.onload = function () {
+            var oLi = document.getElementsByTagName("li");
+            for (var i = 0; i < oLi.length; i++) {
+                oLi[i].onmouseover = function () {
+                    this.className = "current"
+                };
+                oLi[i].onmouseout = function () {
+                    this.className = ""
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class='container'>
+        <ul id="imgList">
+            <li><img src="img/1.jpg" /></li>
+            <li><img src="img/2.jpg" /></li>
+            <li><img src="img/3.jpg" /></li>
+            <li><img src="img/4.jpg" /></li>
+            <li><img src="img/5.jpg" /></li>
+            <li><img src="img/6.jpg" /></li>
+            <li><img src="img/7.jpg" /></li>
+            <li><img src="img/8.jpg" /></li>
+            <li><img src="img/9.jpg" /></li>
+            <li><img src="img/10.jpg" /></li>
+        </ul>
+    </div>
+</body>
+
+</html>
