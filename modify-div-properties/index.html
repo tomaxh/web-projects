@@ -9,7 +9,7 @@
     <title>modify-div-property</title>
     <script>
 
-        var changeAttr = function (attribute) {
+        var changeAttr = (attribute) => {
             let element = document.getElementById('target');
             if (attribute == 'height' || attribute == 'width') {
                 let value = Number(element.style[attribute].slice(0, -2)) ? Number(element.style[attribute].slice(0, -2)) : 100;
@@ -29,23 +29,23 @@
 
         window.onload = function () {
 
-            document.getElementById('width').onclick = function () {
+            document.getElementById('width').onclick = () => {
                 changeAttr('width');
             };
-            document.getElementById('height').onclick = function () {
+            document.getElementById('height').onclick = () => {
                 changeAttr('height');
             };
-            document.getElementById('color').onclick = function () {
+            document.getElementById('color').onclick = () => {
                 changeAttr('color');
 
             };
-            document.getElementById('visibility').onclick = function () {
+            document.getElementById('visibility').onclick = () => {
                 changeAttr('visibility');
             };
-            document.getElementById('visibility').onclick = function () {
+            document.getElementById('visibility').onclick = () => {
                 changeAttr('visibility');
             };
-            document.getElementById('reset').onclick = function () {
+            document.getElementById('reset').onclick = () => {
                 changeAttr('reset');
             };
         };
