@@ -1,3 +1,3 @@
-# Mini Snake Game
+# Snake Mini Game
 
 Snake game in `html`, `javascript` and `css`.
