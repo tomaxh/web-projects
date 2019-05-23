@@ -42,7 +42,6 @@ let lb_calculate = () => {
         }
     })
     document.getElementById('text-field').appendChild(tmp);
-    console.log(plates, totalWeight);
 }
 
 window.onload = () => {
