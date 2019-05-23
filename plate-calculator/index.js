@@ -1,6 +1,6 @@
 let lb_calculate = () => {
     document.getElementById('text-field').innerHTML = "";
-    let totalWeight = document.getElementById('weight-input').value;
+    let totalWeight = document.getElementById('weight-input').value > 45 ? document.getElementById('weight-input').value : 0;
     let plates = {
         '45': { id: 45, 'num': null },
         '35': { id: 35, 'num': null },
@@ -37,7 +37,7 @@ let lb_calculate = () => {
     Object.keys(plates).sort((a, b) => (plates[b].id - plates[a].id)).forEach(key => {
         if (plates[key].num > 0) {
             let tmp1 = document.createElement('li');
-            tmp1.innerHTML = key + ' lbs: ' + plates[key].num + ' ';
+            tmp1.innerHTML = `${key} lbs: ${plates[key].num}`;
             tmp.appendChild(tmp1);
         }
     })
