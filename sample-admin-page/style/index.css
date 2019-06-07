@@ -1,0 +1,15 @@
+body { 
+    padding-top: 30px; 
+    font-family:  sans-serif;
+
+}
+
+.bug{
+    margin-top: 60px;
+}
+
+footer{
+    font-weight: 400;
+    text-align: center;
+    padding:20px ;
+}
